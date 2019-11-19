@@ -1,0 +1,28 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block styles %}
+      {{ super() }}
+      <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+      <link rel='stylesheet' href="{{url_for('static',filename='css/index.css')}}">
+    {% endblock %}
+    {% if title %}
+      <title>{{ title }}</title>
+    {% else %}
+      <title>NEWSFINDER</title>
+    {% endif %}
+  </head>
+  <body>
+    {% block navbar %}
+
+      {% include 'searchbar.html' %}
+
+    {% endblock %}
+
+    {% block content %}
+
+    {% endblock %}
+  </body>
+</html>
