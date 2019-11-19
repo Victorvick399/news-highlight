@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% import 'macros.html' as macro %} {% import 'bootstrap/wtf.html' as wtf%}
+{% block content %}
+<div class="container-fluid" style="font-family: 'Nanum Gothic', sans-serif; background-color:#00203FFF;">
+    <div class="row">
+        <div>
+            <h3 style="text-align: center; font-size: 50px; color: #ADEFD1FF;">Business</h3>
+            {{ macro.displaySources(business) }}
+        </div>
+        <div>
+            <h3 style="text-align: center; font-size: 50px; color: #ADEFD1FF;">Sports</h3>
+            {{ macro.displaySources(sports) }}
+        </div>
+        <div>
+            <h3 style="text-align: center; font-size: 50px; color: #ADEFD1FF;">Entertainment</h3>
+            {{ macro.displaySources(entertainment) }}
+        </div>
+        <div>
+            <h3 style="text-align: center; font-size: 50px; color: #ADEFD1FF;">General</h3>
+            {{ macro.displaySources(sources) }}
+        </div>
+    </div>
+    {% endblock %}
