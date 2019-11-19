@@ -9,7 +9,6 @@ class Config:
 	HEADLINES_SEARCH_URL='https://newsapi.org/v2/top-headlines?category={}&query={}&apiKey={}'
 	HEADLINES_URL='https://newsapi.org/v2/everything?q={}&apiKey={}'
 	EVERYTHING_URL='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
-	SECRET_KEY=os.environ.get('SECRET_KEY')
 	
 
 class ProdConfig(Config):
