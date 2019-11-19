@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content%}
+{% for article in article%}
+<div class="col-md-3">
+  <div class="panel panel-default">
+    <a href="{{article.url}}" target="_blank">
+      <img src="{{article.urlToImage}}" alt="{{article.title}}" style="height:180px; width:290px;">
+    </a>
+    <div class="panel-body">
+      <div class="caption">
+        <h4><a href="{{article.url}}" target="_blank">{{article.title |truncate(40)}}</a></h4>
+        <p>{{article.description}}</p>
+        <a href="{{article.url}}" target="_blank">Find out more..</a>
+      </div>
+      <div class="footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+<br>
+{%endblock%}
